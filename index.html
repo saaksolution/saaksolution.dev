@@ -514,7 +514,47 @@ aside.sidebar.w-80.bg-white.shadow-lg.fixed.h-full.overflow-y-auto.z-40 {
     <button id="mobileMenuToggle" class="lg:hidden fixed top-4 left-4 z-50 bg-secondary text-white p-3 rounded-lg shadow-lg hover:bg-yellow-600 transition-colors">
       <i class="fas fa-bars text-xl"></i>
     </button>
-    
+
+        <header class="bg-white shadow-md fixed w-full top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <!-- <div class="w-10 h-10 bg-gradient-to-br from-secondary to-pink-600 rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-xl">S</span>
+              </div> -->
+              <img src="images/profile.jpeg" alt="SAAK Solution Logo" class="w-10 h-10 object-contain">
+              <span class="text-xl font-bold text-primary">SAAK Solution</span>
+            </a>
+          </div>
+  
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-secondary transition-colors font-medium">Home</a>
+            <a href="index.html#services" class="text-gray-700 hover:text-secondary transition-colors font-medium">Services</a>
+            <a href="index.html#portfolio" class="text-gray-700 hover:text-secondary transition-colors font-medium">Portfolio</a>
+            <a href="index.html#contact" class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-pink-700 transition-colors font-medium">Contact Us</a>
+          </div>
+  
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-secondary focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+  
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden absolute top-16 left-0 w-full bg-white shadow-lg">
+          <div class="px-4 pt-2 pb-4 space-y-3">
+            <a href="index.html" class="block py-2 text-gray-700 hover:text-secondary transition-colors font-medium">Home</a>
+            <a href="index.html#services" class="block py-2 text-gray-700 hover:text-secondary transition-colors font-medium">Services</a>
+            <a href="index.html#portfolio" class="block py-2 text-gray-700 hover:text-secondary transition-colors font-medium">Portfolio</a>
+            <a href="index.html#contact" class="block py-2 text-center bg-secondary text-white rounded-full hover:bg-pink-700 transition-colors font-medium">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <div class="flex">
       <!-- Sidebar -->
       <aside class="sidebar w-80 bg-white shadow-lg fixed h-full overflow-y-auto z-40" role="complementary" aria-label="Profile and navigation sidebar">
@@ -3477,6 +3517,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
 
 
 
