@@ -109,6 +109,12 @@ aside.sidebar.w-80.bg-white.shadow-lg.fixed.h-full.overflow-y-auto.z-40 {
 .pad-tp {
   padding-top: 5rem;
 }
+.mobile-menu {
+  display: none;
+}
+.mobile-menu.active {
+  display: block;
+}
   </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -3514,9 +3520,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize
         createIndicators();
         updateButtons();
+                // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
     </script>
 </body>
 </html>
+
 
 
 
