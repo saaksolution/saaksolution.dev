@@ -43,6 +43,11 @@ nav.fixed.right-6.top-1\/2.transform.-translate-y-1\/2.z-50.space-y-4 {
 .pad-8 { 
   padding-bottom: 1rem;
 }
+.mob-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
 }
 .space-y-2.text-gray-300 a:hover {
     color: #EC006E !important;
@@ -832,7 +837,7 @@ aside.sidebar.w-80.bg-white.shadow-lg.fixed.h-full.overflow-y-auto.z-40 {
                 </p>
 
                 <!-- Stats -->
-                <div class="flex gap-8 py-4">
+                <div class="flex gap-8 py-4 mob-grid">
                   <div>
                     <div class="text-3xl font-bold text-secondary">200+</div>
                     <div class="text-sm text-gray-600">Projects Completed</div>
@@ -3541,6 +3546,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
 
 
 
